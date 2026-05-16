@@ -687,7 +687,7 @@ msgstr "Máte čtečku podporující HTML? Nastavit zde"
 
 #: changedetectionio/blueprint/settings/templates/settings.html
 msgid "'System default' for the same template for all items, or re-use your \"Notification Body\" as the template."
-msgstr ""
+msgstr "'Systémové výchozí' pro stejnou šablonu pro všechny položky, nebo použít \"Text upozornění\" jako šablonu."
 
 #: changedetectionio/blueprint/settings/templates/settings.html
 msgid "Ensure the settings below are correct, they are used to manage the time schedule for checking your web page watches."
@@ -711,11 +711,11 @@ msgstr "Povolit aktualizace UI v reálném čase - (změna vyžaduje restart)"
 
 #: changedetectionio/blueprint/settings/templates/settings.html
 msgid "Enable or Disable Favicons next to the watch list"
-msgstr ""
+msgstr "Zapnout nebo vypnout favicony u seznamů sledování"
 
 #: changedetectionio/blueprint/settings/templates/settings.html
 msgid "Number of items per page in the watch overview list, 0 to disable."
-msgstr ""
+msgstr "Počet položek na stránku v přehledu seznamu sledování, 0 pro vypnutí."
 
 #: changedetectionio/blueprint/settings/templates/settings.html
 msgid "Tip"
@@ -723,21 +723,23 @@ msgstr "Tip"
 
 #: changedetectionio/blueprint/settings/templates/settings.html
 msgid "\"Residential\" and \"Mobile\" proxy type can be more successful than \"Data Center\" for blocked websites."
-msgstr ""
+msgstr "\"Rezidenční\" a \"Mobilní\" typ proxy může být úspěšnější než \"Datové centrum\" u blokuvaných stránek."
 
 #: changedetectionio/blueprint/settings/templates/settings.html
 msgid "\"Name\" will be used for selecting the proxy in the Watch Edit settings"
-msgstr ""
+msgstr "\"Jméno\" bude použito pro výběr proxy v nastavení sledování"
 
 #: changedetectionio/blueprint/settings/templates/settings.html
 msgid ""
 "SOCKS5 proxies with authentication are only supported with 'plain requests' fetcher, for other fetchers you should "
 "whitelist the IP access instead"
 msgstr ""
+"SOCKS5 proxy s ověřováním jsou podporované pouze u 'plain requests' kontrol, u ostatních kontrol je lepší "
+"povolit přímý přístup z IP"
 
 #: changedetectionio/blueprint/settings/templates/settings.html
 msgid "Uptime:"
-msgstr ""
+msgstr "Uptime:"
 
 #: changedetectionio/blueprint/settings/templates/settings.html
 msgid "Python version:"
@@ -767,11 +769,11 @@ msgstr "Využití"
 
 #: changedetectionio/blueprint/settings/templates/settings_llm_tab.html
 msgid "Overview"
-msgstr ""
+msgstr "Přehled"
 
 #: changedetectionio/blueprint/settings/templates/settings_llm_tab.html
 msgid "Provider"
-msgstr ""
+msgstr "Poskytovatel"
 
 #: changedetectionio/blueprint/settings/templates/settings_llm_tab.html
 msgid "Prompts"
@@ -779,11 +781,11 @@ msgstr ""
 
 #: changedetectionio/blueprint/settings/templates/settings_llm_tab.html
 msgid "Behaviour"
-msgstr ""
+msgstr "Chování"
 
 #: changedetectionio/blueprint/settings/templates/settings_llm_tab.html
 msgid "AI-powered change monitoring"
-msgstr ""
+msgstr "Monitorování změn řízené AI"
 
 #: changedetectionio/blueprint/settings/templates/settings_llm_tab.html
 msgid "Connect an LLM to move from \"something changed\" to \"only the thing you care about changed\"."
@@ -827,15 +829,15 @@ msgstr ""
 
 #: changedetectionio/blueprint/settings/templates/settings_llm_tab.html
 msgid "AI / LLM configured:"
-msgstr ""
+msgstr "AI / LLM nastaveno:"
 
 #: changedetectionio/blueprint/settings/templates/settings_llm_tab.html
 msgid "Configure AI Provider"
-msgstr ""
+msgstr "Nastavit AI poskytovatele"
 
 #: changedetectionio/blueprint/settings/templates/settings_llm_tab.html
 msgid "AI Provider"
-msgstr ""
+msgstr "AI poskytovatel"
 
 #: changedetectionio/blueprint/settings/templates/settings_llm_tab.html
 msgid "Third-party data transfer — please read"
