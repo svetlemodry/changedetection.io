@@ -365,6 +365,7 @@ msgid "AI / LLM configuration removed."
 msgstr "AI / LLM konfigurace odstraněna."
 
 #: changedetectionio/blueprint/settings/llm.py
+#, python-brace-format
 msgid "AI summary cache cleared ({} file(s) removed)."
 msgstr "AI cache souhrnů vyčištěna ({}s soubor(ů) odstraněno)."
 
@@ -484,9 +485,7 @@ msgstr ""
 msgid ""
 "If you're having trouble waiting for the page to be fully rendered (text missing etc), try increasing the 'wait' time"
 " here."
-msgstr ""
-"Pokud máte potíže při čekání na plné vykreslení stránky (chybějící text atp.), zkuste navýšit čas 'prodlevy'"
-" zde."
+msgstr "Pokud máte potíže při čekání na plné vykreslení stránky (chybějící text atp.), zkuste navýšit čas 'prodlevy' zde."
 
 #: changedetectionio/blueprint/settings/templates/settings.html changedetectionio/blueprint/ui/templates/edit.html
 msgid "This will wait <i>n</i> seconds before extracting the text."
@@ -579,7 +578,7 @@ msgstr "Pozn.: Toto je aplikováno globálně dodatečně k pravidlům nastaven�
 
 #: changedetectionio/blueprint/settings/templates/settings.html changedetectionio/templates/edit/text-options.html
 msgid "Matching text will be ignored in the text snapshot (you can still see it but it wont trigger a change)"
-msgstr ""
+msgstr "Text shody bude ignorován ve snímku textu (bude i nadále vidět, ale nebude spouštět upozornění na změnu)"
 
 #: changedetectionio/blueprint/settings/templates/settings.html changedetectionio/templates/edit/text-options.html
 msgid "Each line processed separately, any line matching will be ignored (removed before creating the checksum)"
@@ -777,7 +776,7 @@ msgstr "Poskytovatel"
 
 #: changedetectionio/blueprint/settings/templates/settings_llm_tab.html
 msgid "Prompts"
-msgstr ""
+msgstr "Prompty"
 
 #: changedetectionio/blueprint/settings/templates/settings_llm_tab.html
 msgid "Behaviour"
@@ -913,39 +912,40 @@ msgstr ""
 #: changedetectionio/blueprint/settings/templates/settings_llm_tab.html
 #, python-format
 msgid ""
-"Local reasoning models (Qwen3, DeepSeek-R1, Gemma 3, etc.) emit chain-of-thought before the final answer. This "
-"multiplier scales every <code>max_tokens</code> cap for this endpoint to leave reasoning room. Defaults to "
-"%(default)s; raise it if responses come back truncated, lower it if you want tighter limits. Only applied to self-"
-"hosted OpenAI-compatible endpoints — cloud providers (OpenAI, Anthropic, Gemini) keep their original tight caps."
+"Reasoning models (Qwen3, DeepSeek-R1, Gemma 3, etc.) emit chain-of-thought before the final answer. This multiplier "
+"scales every <code>max_tokens</code> cap for this endpoint to leave reasoning room. Defaults to %(default)s; raise it"
+" if responses come back truncated or empty, lower it (down to 1x) if you want tighter limits on a paid endpoint. "
+"Applied to Ollama and OpenAI-compatible endpoints — other cloud providers (OpenAI, Anthropic, Gemini) keep their "
+"original tight caps."
 msgstr ""
 
 #: changedetectionio/blueprint/settings/templates/settings_llm_tab.html
 msgid "Load available models"
-msgstr ""
+msgstr "Načíst dostupné modely"
 
 #: changedetectionio/blueprint/settings/templates/settings_llm_tab.html
 msgid "Available models"
-msgstr ""
+msgstr "Dostupné modely"
 
 #: changedetectionio/blueprint/settings/templates/settings_llm_tab.html
 msgid "choose a model"
-msgstr ""
+msgstr "vybrat model"
 
 #: changedetectionio/blueprint/settings/templates/settings_llm_tab.html
 msgid "Enter API key and click 'Load available models'"
-msgstr ""
+msgstr "Vložit API klíč a kliknout na 'Načíst dostupné modely'"
 
 #: changedetectionio/blueprint/settings/templates/settings_llm_tab.html
 msgid "Remove AI / LLM configuration?"
-msgstr ""
+msgstr "Odstranit AI / LLM konfiguraci?"
 
 #: changedetectionio/blueprint/settings/templates/settings_llm_tab.html
 msgid "This will remove your saved AI provider, model, and API key."
-msgstr ""
+msgstr "Toto odstraní uloženého poskytovatele AI, model a API klíč."
 
 #: changedetectionio/blueprint/settings/templates/settings_llm_tab.html
 msgid "Remove"
-msgstr ""
+msgstr "Odstranit"
 
 #: changedetectionio/blueprint/settings/templates/settings_llm_tab.html
 #: changedetectionio/blueprint/ui/templates/clear_all_history.html changedetectionio/templates/base.html
@@ -954,7 +954,7 @@ msgstr "Zrušit"
 
 #: changedetectionio/blueprint/settings/templates/settings_llm_tab.html
 msgid "Test connection"
-msgstr ""
+msgstr "Otestovat připojení"
 
 #: changedetectionio/blueprint/settings/templates/settings_llm_tab.html
 msgid ""
@@ -988,6 +988,12 @@ msgstr ""
 
 #: changedetectionio/blueprint/settings/templates/settings_llm_tab.html
 msgid "Removes all cached AI change summaries across all watches. They will be regenerated on the next check."
+msgstr ""
+
+#: changedetectionio/blueprint/settings/templates/settings_llm_tab.html
+msgid ""
+"Enables litellm verbose output (routed through loguru). Useful when diagnosing provider errors or empty responses. "
+"Leave off in production — generates a lot of log volume."
 msgstr ""
 
 #: changedetectionio/blueprint/settings/templates/settings_llm_tab.html
@@ -1278,7 +1284,7 @@ msgstr "Sledovat skupinu / Značka"
 
 #: changedetectionio/blueprint/tags/templates/groups-overview.html
 msgid "Groups allows you to manage filters and notifications for multiple watches under a single organisational tag."
-msgstr ""
+msgstr "Skupiny umožňují spravovat filtry a upozornění pro vícero sledování seskupené pod jedním organizačním tagem."
 
 #: changedetectionio/blueprint/tags/templates/groups-overview.html
 msgid "# Watches"
@@ -1313,7 +1319,7 @@ msgstr "Smazat skupinu?"
 #: changedetectionio/blueprint/tags/templates/groups-overview.html
 #, python-format
 msgid "<p>Are you sure you want to delete group <strong>%(title)s</strong>?</p><p>This action cannot be undone.</p>"
-msgstr ""
+msgstr "<p>Opravdu chcete smazat skupinu <strong>%(title)s</strong>?</p><p>Tuto akci nelze vzít zpět.</p>"
 
 #: changedetectionio/blueprint/tags/templates/groups-overview.html changedetectionio/blueprint/ui/templates/edit.html
 #: changedetectionio/blueprint/watchlist/templates/watch-overview.html
@@ -1334,6 +1340,8 @@ msgid ""
 "<p>Are you sure you want to unlink all watches from group <strong>%(title)s</strong>?</p><p>The tag will be kept but "
 "watches will be removed from it.</p>"
 msgstr ""
+"<p>Opravud chcete odpojit všechna sledování pod skupinou <strong>%(title)s</strong>?</p><p>Tag bude zachován, ale "
+"podřazená sledování budou odstraněna.</p>"
 
 #: changedetectionio/blueprint/tags/templates/groups-overview.html
 msgid "Unlink"
@@ -1380,17 +1388,17 @@ msgstr ""
 #: changedetectionio/blueprint/ui/__init__.py
 #, python-brace-format
 msgid "{} watches queued for rechecking"
-msgstr ""
+msgstr "{} sledování ve frontě ke kontrole"
 
 #: changedetectionio/blueprint/ui/__init__.py
 #, python-brace-format
 msgid "{} watches errors cleared"
-msgstr ""
+msgstr "{} chyb sledování vyčištěno"
 
 #: changedetectionio/blueprint/ui/__init__.py
 #, python-brace-format
 msgid "{} watches cleared/reset."
-msgstr ""
+msgstr "{} sledování vyčištěno/resetováno."
 
 #: changedetectionio/blueprint/ui/__init__.py
 #, python-brace-format
@@ -1400,7 +1408,7 @@ msgstr "{} monitorů nastaveno na použití výchozího nastavení oznámení"
 #: changedetectionio/blueprint/ui/__init__.py
 #, python-brace-format
 msgid "{} watches were tagged"
-msgstr ""
+msgstr "{} sledování otagováno"
 
 #: changedetectionio/blueprint/ui/__init__.py
 msgid "Watch not found"
@@ -1417,7 +1425,7 @@ msgstr "jasný"
 
 #: changedetectionio/blueprint/ui/__init__.py
 msgid "History clearing started in background"
-msgstr ""
+msgstr "Čištění historie spuštěno na pozadí"
 
 #: changedetectionio/blueprint/ui/__init__.py
 msgid "Incorrect confirmation text."
@@ -1426,7 +1434,7 @@ msgstr "Žádné informace"
 #: changedetectionio/blueprint/ui/__init__.py
 #, python-brace-format
 msgid "The watch by UUID {} does not exist."
-msgstr ""
+msgstr "Sledování s UUID {} neexistuje."
 
 #: changedetectionio/blueprint/ui/__init__.py
 msgid "Deleted."
@@ -1434,15 +1442,15 @@ msgstr "Smazáno"
 
 #: changedetectionio/blueprint/ui/__init__.py
 msgid "Cloned, you are editing the new watch."
-msgstr ""
+msgstr "Naklonováno, upravujete nové sledování."
 
 #: changedetectionio/blueprint/ui/__init__.py
 msgid "Watch is already queued or being checked."
-msgstr ""
+msgstr "Sledování je již zařazeno do fronty ke kontrole."
 
 #: changedetectionio/blueprint/ui/__init__.py
 msgid "Queued 1 watch for rechecking."
-msgstr ""
+msgstr "Zařazeno 1 sledování ke kontrole."
 
 #: changedetectionio/blueprint/ui/__init__.py
 #, python-brace-format
@@ -1461,7 +1469,7 @@ msgstr "Přidává se sledování do fronty pro opětovnou kontrolu na pozadí..
 #: changedetectionio/blueprint/ui/__init__.py
 #, python-brace-format
 msgid "Could not share, something went wrong while communicating with the share server - {}"
-msgstr ""
+msgstr "Sdílení selhalo, něco se pokazilo při komunikaci se sdílecím serverem = {}"
 
 #: changedetectionio/blueprint/ui/__init__.py
 msgid "Language set to auto-detect from browser"
@@ -1469,52 +1477,52 @@ msgstr "Jazyk nastaven na automatickou detekci z prohlížeče"
 
 #: changedetectionio/blueprint/ui/diff.py changedetectionio/blueprint/ui/preview.py
 msgid "No history found for the specified link, bad link?"
-msgstr ""
+msgstr "Historie pro vybraný odkaz nenalezena, chybný odkaz?"
 
 #: changedetectionio/blueprint/ui/diff.py
 msgid "Not enough history (2 snapshots required) to show difference page for this watch."
-msgstr ""
+msgstr "Nedostatečná historie (vyžadovány 2 záchyty) pro zobrazení rozdílů tohoto sledování."
 
 #: changedetectionio/blueprint/ui/diff.py
 #, python-format
 msgid "Monthly AI token budget of %(budget)s tokens reached (%(used)s used). Resets next month."
-msgstr ""
+msgstr "Dosažen měsíční počet %(budget)s AI tokenů (%(used)s použito). Resetuje se příští měsíc."
 
 #: changedetectionio/blueprint/ui/edit.py
 msgid "No watches to edit"
-msgstr ""
+msgstr "Žádná sledování k úpravě"
 
 #: changedetectionio/blueprint/ui/edit.py
 #, python-brace-format
 msgid "No watch with the UUID {} found."
-msgstr ""
+msgstr "Sledování s UUID {} nenalezeno."
 
 #: changedetectionio/blueprint/ui/edit.py
 #, python-brace-format
 msgid "Switched to mode - {}."
-msgstr ""
+msgstr "Přepnuto na mód - {}."
 
 #: changedetectionio/blueprint/ui/edit.py
 #, python-brace-format
 msgid "Could not load '{}' processor, processor plugin might be missing. Please select a different processor."
-msgstr ""
+msgstr "Nelze načíst '{}' procesor, zásuvný modul procesoru nejspíše chybí. Vyberte prosím jiný procesor."
 
 #: changedetectionio/blueprint/ui/edit.py
 #, python-brace-format
 msgid "Could not load '{}' processor, processor plugin might be missing."
-msgstr ""
+msgstr "Nelze načíst '{}' procesor, zásuvný modul procesoru nejspíše chybí."
 
 #: changedetectionio/blueprint/ui/edit.py
 msgid "System settings default"
-msgstr ""
+msgstr "Výchozí systémová nastavení"
 
 #: changedetectionio/blueprint/ui/edit.py
 msgid "Default"
-msgstr ""
+msgstr "Výchozí"
 
 #: changedetectionio/blueprint/ui/edit.py
 msgid "Updated watch - unpaused!"
-msgstr ""
+msgstr "Sledování aktualizováno - znovu spuštěno!"
 
 #: changedetectionio/blueprint/ui/edit.py
 msgid "Updated watch."
@@ -1522,15 +1530,15 @@ msgstr "Sledování aktualizováno."
 
 #: changedetectionio/blueprint/ui/preview.py
 msgid "Preview unavailable - No fetch/check completed or triggers not reached"
-msgstr ""
+msgstr "Náhled nedostupný - stažení/kontrola nedokončena nebo nebyly splněny podmínky kontroly"
 
 #: changedetectionio/blueprint/ui/preview.py
 msgid "Diff"
-msgstr ""
+msgstr "Rozdíly"
 
 #: changedetectionio/blueprint/ui/templates/clear_all_history.html
 msgid "This will remove version history (snapshots) for ALL watches, but keep your list of URLs!"
-msgstr ""
+msgstr "Toto odstraní historii verzí (snímky) pro VŠECHNA sledování, ale ponechá seznam URL adres!"
 
 #: changedetectionio/blueprint/ui/templates/clear_all_history.html
 msgid "You may like to use the"
@@ -3178,6 +3186,10 @@ msgstr ""
 
 #: changedetectionio/forms.py
 msgid "Use LLM as a fallback for extracting price and restock info"
+msgstr ""
+
+#: changedetectionio/forms.py
+msgid "Enable LLM debug logging"
 msgstr ""
 
 #: changedetectionio/forms.py
